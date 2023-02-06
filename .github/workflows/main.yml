@@ -1,5 +1,5 @@
-name: fixing insecure modules
-run-name: ${{ github.actor }} is fixing the insecure modules
+name: lab14
+run-name: ${{ github.actor }} is fixing the lab
 on: [push]
 jobs:
   fix-modules:
@@ -8,8 +8,18 @@ jobs:
       working-directory-insecure: ./insecure
     steps: 
       - uses: actions/checkout@v3
-      - name: Run npm audit
+      - name: Run npm audit on insecure program
         run: |
           npm update && npm i --package-lock-only && npm audit
         working-directory: ${{env.working-directory-insecure}}
+  lint-roll:
+    runs-on: ubuntu-latest
+    env:
+      working-directory-mashup: ./mashup
+    steps:
+      - uses: actions/checout@v3
+      - run: |
+          npm run lint
+        working-directory: ${{env.working-directory-mashup}}
+      
 
