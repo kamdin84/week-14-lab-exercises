@@ -7,4 +7,4 @@ jobs:
     steps: 
       - name: Run npm audit
         run: |
-          cd s ${{ github.workspace/insecure }} | npm audit
+          cd ${{ github.workspace/insecure }} | npm audit
