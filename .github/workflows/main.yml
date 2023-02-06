@@ -17,7 +17,7 @@ jobs:
     env:
       working-directory-mashup: ./mashup
     steps:
-      - uses: actions/checout@v3
+      - uses: actions/checkout@v3
       - name: Run npm run lint on mashed up code
         run: |
           npm run lint
