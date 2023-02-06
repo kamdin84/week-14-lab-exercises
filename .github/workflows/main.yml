@@ -4,8 +4,10 @@ on: [push]
 jobs:
   fix-modules:
     runs-on: ubuntu-latest
+    env:
+      working-directory-insecure: ./insecure
     steps: 
       - name: Run npm audit
         run: |
           npm update && npm i --package-lock-only && npm audit
-          working-directory: insecure
+
