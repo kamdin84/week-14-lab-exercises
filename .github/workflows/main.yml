@@ -9,4 +9,4 @@ jobs:
         run: |
           npm i --package-lock-only
           npm audit
-        working-directory: ./insecure
+        working-directory: insecure
