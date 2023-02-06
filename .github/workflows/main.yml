@@ -6,5 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Run npm audit
+        working-directory: ./insecure
         run: |
-           npm audit
+          npm i --package-lock-only
+        run: |
+          npm audit
+          
