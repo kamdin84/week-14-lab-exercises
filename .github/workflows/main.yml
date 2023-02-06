@@ -8,5 +8,5 @@ jobs:
       - name: Run npm audit
         working-directory: ./insecure
         run: |
-          npm i --package-lock-only && npm audit
+          npm i --package-lock-only &&  npm audit
           
