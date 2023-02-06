@@ -1,0 +1,10 @@
+name: fixing insecure modules
+run-name: ${{ github.actor }} is fixing the insecure modules
+on: [push]
+jobs:
+  fix-modules:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run npm audit
+        run: |
+          cd insecure | npm audit
