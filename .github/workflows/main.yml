@@ -18,6 +18,7 @@ jobs:
       working-directory-mashup: ./mashup
     steps:
       - uses: actions/checout@v3
+      - name: Run npm run lint on mashed up code
       - run: |
           npm run lint
         working-directory: ${{env.working-directory-mashup}}
