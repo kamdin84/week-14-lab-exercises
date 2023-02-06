@@ -10,4 +10,5 @@ jobs:
       - name: Run npm audit
         run: |
           npm update && npm i --package-lock-only && npm audit
+        working-directory: ${{env.working-directory-insecure}}
 
