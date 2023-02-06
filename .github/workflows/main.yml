@@ -9,7 +9,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v3
       - name: Run npm audit on insecure program
-      - run: |
+        run: |
           npm update && npm i --package-lock-only && npm audit
         working-directory: ${{env.working-directory-insecure}}
   lint-roll:
@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checout@v3
       - name: Run npm run lint on mashed up code
-      - run: |
+        run: |
           npm run lint
         working-directory: ${{env.working-directory-mashup}}
       
